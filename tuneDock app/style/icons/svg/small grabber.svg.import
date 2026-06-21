@@ -1,0 +1,18 @@
+[remap]
+
+importer="svg"
+type="DPITexture"
+uid="uid://c3pxnjc868oux"
+path="res://.godot/imported/small grabber.svg-0069b6aef2ebf2f283bb8f6390afd60c.dpitex"
+
+[deps]
+
+source_file="res://style/icons/svg/small grabber.svg"
+dest_files=["res://.godot/imported/small grabber.svg-0069b6aef2ebf2f283bb8f6390afd60c.dpitex"]
+
+[params]
+
+base_scale=1.0
+saturation=1.0
+color_map={}
+compress=true

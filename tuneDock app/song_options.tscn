@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dxtfk83dyio7j"]
+
+[ext_resource type="Script" uid="uid://by24yabv6io2" path="res://song_options.gd" id="1_u442e"]
+[ext_resource type="Texture2D" uid="uid://bjot8diy08xr6" path="res://style/icons/svg/record.png" id="2_5pfes"]
+[ext_resource type="Texture2D" uid="uid://c54ywgqn8kdde" path="res://style/icons/svg/cancel.svg" id="3_hrg51"]
+
+[node name="song options" type="Control" unique_id=272006441 node_paths=PackedStringArray("cover_art", "song_name_edit")]
+layout_mode = 3
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u442e")
+cover_art = NodePath("Panel/HBoxContainer/cover_art")
+song_name_edit = NodePath("Panel/HBoxContainer/Label")
+
+[node name="Panel" type="Panel" parent="." unique_id=234063118]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=936283506]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+
+[node name="cover_art" type="TextureRect" parent="Panel/HBoxContainer" unique_id=1238172912]
+layout_mode = 2
+texture = ExtResource("2_5pfes")
+stretch_mode = 4
+
+[node name="Label" type="LineEdit" parent="Panel/HBoxContainer" unique_id=1994072870]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "song name by author"
+
+[node name="cancel" type="Button" parent="Panel/HBoxContainer" unique_id=1270921807]
+layout_mode = 2
+icon = ExtResource("3_hrg51")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=387520966]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="delete" type="Button" parent="Panel/VBoxContainer" unique_id=955469273]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Delete song"
+
+[connection signal="pressed" from="Panel/HBoxContainer/cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/delete" to="." method="_on_delete_pressed"]

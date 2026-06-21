@@ -1,0 +1,18 @@
+[remap]
+
+importer="svg"
+type="DPITexture"
+uid="uid://c12qbu3nq25rn"
+path="res://.godot/imported/large grabber vertical inactive.svg-98259a85b9315cdd515e780ae98408dc.dpitex"
+
+[deps]
+
+source_file="res://style/icons/svg/large grabber vertical inactive.svg"
+dest_files=["res://.godot/imported/large grabber vertical inactive.svg-98259a85b9315cdd515e780ae98408dc.dpitex"]
+
+[params]
+
+base_scale=1.0
+saturation=1.0
+color_map={}
+compress=true

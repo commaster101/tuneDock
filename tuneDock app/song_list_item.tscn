@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cnu6rm7ra3sx2"]
+
+[ext_resource type="Script" uid="uid://by852dhsvhwpn" path="res://song_list_item.gd" id="1_epem6"]
+[ext_resource type="Texture2D" uid="uid://bjot8diy08xr6" path="res://style/icons/svg/record.png" id="2_8yan8"]
+[ext_resource type="Texture2D" uid="uid://cw4b61cu52y6s" path="res://style/icons/svg/small options.svg" id="3_y1y60"]
+
+[node name="song list item" type="PanelContainer" unique_id=1882667980]
+offset_right = 512.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+script = ExtResource("1_epem6")
+cover_art_size = 64
+cover_art = ExtResource("2_8yan8")
+text = null
+dir_path = null
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=786511386]
+layout_mode = 2
+
+[node name="cover_art" type="TextureRect" parent="HBoxContainer" unique_id=1940705219]
+layout_mode = 2
+texture = ExtResource("2_8yan8")
+
+[node name="Label" type="RichTextLabel" parent="HBoxContainer" unique_id=925819078]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "song name by author"
+scroll_active = false
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="." unique_id=176679396]
+layout_mode = 2
+
+[node name="options" type="Button" parent="Control" unique_id=1576955941]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+text = "
+"
+icon = ExtResource("3_y1y60")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="play" type="Button" parent="Control" unique_id=664448311]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.8
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Control/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Control/play" to="." method="_on_play_pressed"]

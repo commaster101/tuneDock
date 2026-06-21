@@ -1,0 +1,7 @@
+# Godot plugin keep rules
+-keep class org.godotengine.plugin.android.MusicPlayerHelper.MusicPlayer { *; }
+-keep class org.godotengine.plugin.android.MusicPlayerHelper.MusicService { *; }
+-keep class org.godotengine.godot.plugin.UsedByGodot
+-keepclassmembers class * {
+    @org.godotengine.godot.plugin.UsedByGodot *;
+}

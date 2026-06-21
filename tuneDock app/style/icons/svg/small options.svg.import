@@ -1,0 +1,18 @@
+[remap]
+
+importer="svg"
+type="DPITexture"
+uid="uid://cw4b61cu52y6s"
+path="res://.godot/imported/small options.svg-bc4a26ed8b594afbd17c66cea69c3965.dpitex"
+
+[deps]
+
+source_file="res://style/icons/svg/small options.svg"
+dest_files=["res://.godot/imported/small options.svg-bc4a26ed8b594afbd17c66cea69c3965.dpitex"]
+
+[params]
+
+base_scale=1.0
+saturation=1.0
+color_map={}
+compress=true

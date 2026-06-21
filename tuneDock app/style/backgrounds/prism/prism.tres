@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cg8jkuixuu8l1"]
+
+[ext_resource type="Shader" uid="uid://ch8w3poi8wva4" path="res://style/backgrounds/prism/prism.gdshader" id="1_uk4bu"]
+
+[resource]
+shader = ExtResource("1_uk4bu")
+shader_parameter/time_scale = 0.5

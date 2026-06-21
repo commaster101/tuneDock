@@ -1,0 +1,44 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://btpbu2p2wi467"]
+
+[ext_resource type="Shader" uid="uid://46r3jrn8rc5i" path="res://style/backgrounds/cloud/cloud.gdshader" id="1_hu6gy"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0slbl"]
+fractal_type = 0
+domain_warp_enabled = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7k8wf"]
+generate_mipmaps = false
+noise = SubResource("FastNoiseLite_0slbl")
+seamless = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_qdse5"]
+seed = 1
+frequency = 0.0032
+fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_86361"]
+generate_mipmaps = false
+noise = SubResource("FastNoiseLite_qdse5")
+seamless = true
+
+[sub_resource type="Gradient" id="Gradient_hu6gy"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hlwrw"]
+noise_type = 3
+fractal_type = 0
+domain_warp_enabled = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_70xnp"]
+generate_mipmaps = false
+noise = SubResource("FastNoiseLite_hlwrw")
+color_ramp = SubResource("Gradient_hu6gy")
+seamless = true
+
+[resource]
+shader = ExtResource("1_hu6gy")
+shader_parameter/noise1 = SubResource("NoiseTexture2D_7k8wf")
+shader_parameter/noise2 = SubResource("NoiseTexture2D_86361")
+shader_parameter/noise3 = SubResource("NoiseTexture2D_70xnp")
+shader_parameter/direction1 = Vector2(-0.015, -0.045)
+shader_parameter/direction2 = Vector2(-0.07, -0.04)
+shader_parameter/direction3 = Vector2(-0.005, 0)

@@ -1,0 +1,224 @@
+[gd_scene format=3 uid="uid://dah3eyhhhgfnt"]
+
+[ext_resource type="Script" uid="uid://d3ohfl4q7cg76" path="res://audio master.gd" id="1_0ulxr"]
+[ext_resource type="Texture2D" uid="uid://c3loe28osmctl" path="res://icons/search_bright.png" id="2_wa856"]
+[ext_resource type="Script" uid="uid://1qh0fpsjg1o2" path="res://loaded_songs.gd" id="2_wfg4t"]
+[ext_resource type="Texture2D" uid="uid://bvpliw0c43kpi" path="res://icon.svg" id="4_a28my"]
+[ext_resource type="Texture2D" uid="uid://bij5hb3q5elw" path="res://icons/prev_bright.png" id="5_qyvtj"]
+[ext_resource type="Texture2D" uid="uid://c3hrcqgo0pbql" path="res://icons/icons_bright (54).png" id="5_ucgvj"]
+[ext_resource type="Script" uid="uid://dxouix58b14tc" path="res://playing_song.gd" id="5_wfg4t"]
+[ext_resource type="Texture2D" uid="uid://dcx2387fkwngs" path="res://icons/icons_bright (59).png" id="6_83mth"]
+[ext_resource type="Script" uid="uid://uyxjlhnmxjmc" path="res://media_controls.gd" id="7_upbuy"]
+[ext_resource type="Texture2D" uid="uid://c2kcy6f6e22qm" path="res://icons/next_bright.png" id="8_0ulxr"]
+[ext_resource type="Script" uid="uid://b7vqv6iwb54rh" path="res://gloabl_settings.gd" id="11_upbuy"]
+
+[sub_resource type="AudioStream" id="AudioStream_gki41"]
+
+[node name="audio master" type="Node" unique_id=1377502065 node_paths=PackedStringArray("audio", "playing_song_display")]
+script = ExtResource("1_0ulxr")
+audio = NodePath("AudioStreamPlayer")
+playing_song_display = NodePath("TabContainer/Now Playing")
+
+[node name="panel" type="Panel" parent="." unique_id=514680438]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=751651644]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+current_tab = 0
+
+[node name="Playlist" type="Control" parent="TabContainer" unique_id=648611360 node_paths=PackedStringArray("playlist_container", "audio_master")]
+layout_mode = 2
+script = ExtResource("2_wfg4t")
+playlist_container = NodePath("Scroll/ScrollContainer/VBoxContainer")
+audio_master = NodePath("../..")
+metadata/_tab_index = 0
+
+[node name="select" type="Control" parent="TabContainer/Playlist" unique_id=1673777944]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.05
+grow_horizontal = 2
+
+[node name="playlist select" type="OptionButton" parent="TabContainer/Playlist/select" unique_id=1137502073]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+selected = 0
+allow_reselect = true
+item_count = 1
+popup/item_0/text = "All"
+popup/item_0/id = 0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="TabContainer/Playlist/select" unique_id=1824855952]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Search button" type="Button" parent="TabContainer/Playlist/select/AspectRatioContainer" unique_id=609792146]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("2_wa856")
+alignment = 2
+icon_alignment = 2
+expand_icon = true
+
+[node name="Scroll" type="Control" parent="TabContainer/Playlist" unique_id=1617508064]
+layout_mode = 1
+anchor_top = 0.05
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.2840023
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Playlist/Scroll" unique_id=1336308251]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Playlist/Scroll/ScrollContainer" unique_id=2024507210]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FileDialog" type="FileDialog" parent="TabContainer/Playlist" unique_id=521875087]
+title = "Open a Directory"
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[node name="Now Playing" type="Control" parent="TabContainer" unique_id=31436336 node_paths=PackedStringArray("audio_master", "cover_art", "song_name_label", "lyrics_display")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("5_wfg4t")
+audio_master = NodePath("../..")
+cover_art = NodePath("visuals/cover art")
+song_name_label = NodePath("../../media controls/VBoxContainer/song name label")
+lyrics_display = NodePath("visuals/RichTextLabel")
+metadata/_tab_index = 1
+
+[node name="visuals" type="VSplitContainer" parent="TabContainer/Now Playing" unique_id=89117148]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+split_offsets = PackedInt32Array(250)
+split_offset = 250
+
+[node name="cover art" type="TextureRect" parent="TabContainer/Now Playing/visuals" unique_id=250995702]
+layout_mode = 2
+texture = ExtResource("4_a28my")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Now Playing/visuals" unique_id=1171151481]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "No song playing ):"
+horizontal_alignment = 1
+
+[node name="media controls" type="Control" parent="." unique_id=1521301372 node_paths=PackedStringArray("audio_master", "song_progress_bar", "play_pause")]
+layout_mode = 3
+anchor_top = 0.9
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0999756
+offset_bottom = 3.0999756
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_upbuy")
+audio_master = NodePath("..")
+song_progress_bar = NodePath("VBoxContainer/song progress bar")
+play_pause = NodePath("VBoxContainer/media controls/play_pause")
+
+[node name="Panel" type="Panel" parent="media controls" unique_id=177953643]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="media controls" unique_id=1331045119]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="song name label" type="Label" parent="media controls/VBoxContainer" unique_id=1432369213]
+layout_mode = 2
+text = "No song playing"
+horizontal_alignment = 1
+
+[node name="song progress bar" type="HSlider" parent="media controls/VBoxContainer" unique_id=557654056]
+layout_mode = 2
+
+[node name="media controls" type="HBoxContainer" parent="media controls/VBoxContainer" unique_id=141820581]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="previous" type="Button" parent="media controls/VBoxContainer/media controls" unique_id=1516337796]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("5_qyvtj")
+flat = true
+icon_alignment = 2
+expand_icon = true
+
+[node name="play_pause" type="TextureButton" parent="media controls/VBoxContainer/media controls" unique_id=949757526]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+texture_normal = ExtResource("5_ucgvj")
+texture_pressed = ExtResource("6_83mth")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="next" type="Button" parent="media controls/VBoxContainer/media controls" unique_id=2062925991]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("8_0ulxr")
+flat = true
+expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=854544502]
+stream = SubResource("AudioStream_gki41")
+
+[node name="Settings" type="Node" parent="." unique_id=1065560037]
+unique_name_in_owner = true
+script = ExtResource("11_upbuy")
+
+[connection signal="pressed" from="TabContainer/Playlist/select/AspectRatioContainer/Search button" to="TabContainer/Playlist" method="_on_search_button_pressed"]
+[connection signal="dir_selected" from="TabContainer/Playlist/FileDialog" to="TabContainer/Playlist" method="_on_file_dialog_dir_selected"]
+[connection signal="drag_ended" from="media controls/VBoxContainer/song progress bar" to="media controls" method="_on_song_progress_bar_drag_ended"]
+[connection signal="pressed" from="media controls/VBoxContainer/media controls/previous" to="TabContainer/Playlist" method="play_prev"]
+[connection signal="toggled" from="media controls/VBoxContainer/media controls/play_pause" to="media controls" method="_on_play_pause_toggled"]
+[connection signal="pressed" from="media controls/VBoxContainer/media controls/next" to="TabContainer/Playlist" method="play_next"]

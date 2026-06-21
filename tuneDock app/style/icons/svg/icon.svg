@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="record.png"
+   inkscape:export-xdpi="187.5"
+   inkscape:export-ydpi="187.5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="1.1374156"
+     inkscape:cx="213.64223"
+     inkscape:cy="266.83299"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="8"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect5"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.5"
+       inkscape:label="back outline"
+       d="m 166,134 c -17.728,0 -32,14.272 -32,32 v 186 c 0,17.728 14.272,32 32,32 h 186 c 17.728,0 32,-14.272 32,-32 V 166 c 0,-17.728 -14.272,-32 -32,-32 z m 87,111 a 8,8 0 0 1 8,8 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 z" />
+    <path
+       id="rect2"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.5"
+       inkscape:label="back"
+       d="m 160,128 c -17.728,0 -32,14.272 -32,32 v 186 c 0,17.728 14.272,32 32,32 h 186 c 17.728,0 32,-14.272 32,-32 V 160 c 0,-17.728 -14.272,-32 -32,-32 z m 93,117 a 8,8 0 0 1 8,8 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 z" />
+    <path
+       id="path3"
+       style="fill:#000000;fill-opacity:1;stroke-width:0.5"
+       inkscape:label="record outline"
+       d="M 253,141 A 112,112 0 0 0 141,253 112,112 0 0 0 253,365 112,112 0 0 0 365,253 112,112 0 0 0 253,141 Z m 0,104 a 8,8 0 0 1 8,8 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 z" />
+    <path
+       id="circle4"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.5"
+       inkscape:label="record label"
+       d="m 253,221 a 32,32 0 0 0 -32,32 32,32 0 0 0 32,32 32,32 0 0 0 32,-32 32,32 0 0 0 -32,-32 z m 0,24 a 8,8 0 0 1 8,8 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 z" />
+    <path
+       id="path9"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.5"
+       d="m 332,252 c 0,-42.52593 -37.47407,-76 -80,-76 v -15.9355 c 51.36248,0 96,40.57302 96,91.9355 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="path10"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.5"
+       d="M 176,252 V 151 h -16 v 101 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="path1"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.5"
+       d="m 176,252 c 0,42.52593 33.47407,76 76,76 v 16 c -51.36248,0 -92,-40.63752 -92,-92 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="path2"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.515345"
+       d="M 232,244 H 132 v 16 h 100 z"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       id="path4"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.5"
+       d="m 332,252 c 0,42.52593 -37.47407,76 -80,76 v 16 c 51.36248,0 96,-40.63752 96,-92 z"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+</svg>

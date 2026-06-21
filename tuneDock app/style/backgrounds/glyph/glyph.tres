@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://iodlt15ytdj8"]
+
+[ext_resource type="Shader" uid="uid://2x2rb87jwger" path="res://style/backgrounds/glyph/glyph.gdshader" id="1_ljplh"]
+
+[resource]
+shader = ExtResource("1_ljplh")
+shader_parameter/dash_color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+shader_parameter/wave_dir = Vector2(1, 1)
+shader_parameter/scroll_speed = 2.0
+shader_parameter/wave_count = 3.0
+shader_parameter/aspect = 0.5625
+shader_parameter/cells_x = 50.0
+shader_parameter/thickness = 0.2
+shader_parameter/visibility_threshold = 0.0
+shader_parameter/overlap = 0.75
